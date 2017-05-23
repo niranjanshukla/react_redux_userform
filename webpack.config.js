@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  context: __firname,
+  context: __dirname,
   entry: {
     userform: './userform.js'
   },
@@ -15,7 +15,7 @@ module.exports = {
       {
         test: /\.js?$/,
         exclude: /node_modules/,
-        loader: 'babel',
+        loader: 'babel-loader',
         query: {
           presets: ['react', 'es2015']
         }
