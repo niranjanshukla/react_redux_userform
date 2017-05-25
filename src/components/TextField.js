@@ -1,18 +1,8 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import { FormControl, ControlLabel } from 'react-bootstrap';
 
 export default React.createClass({
   displayName: 'Text Field',
-
-  propTypes: {
-    id: PropTypes.string.isRequired,
-    placeholder: PropTypes.string,
-    label: PropTypes.string
-  },
-
-  contextTypes: {
-    update: PropTypes.func.isRequired,
-    values: PropTypes.object.isRequired,
-  },
 
   updateValue(value) {
     this.context.update(this.props.name, value);
@@ -25,9 +15,12 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <label htmlFor={this.props.id}>{this.props.label}</label>
-        <input type="text" className="form-control" id={this.props.id} placeholder={this.props.placeholder} value={this.context.values[this.props.id]}/>
-     </div>
+      <ControlLabel>{this.props.label}</ControlLabel>
+          <FormControl
+            type="text"
+            placeholder={this.props.placeholder}
+          />
+        </div>
     );
   }
 });

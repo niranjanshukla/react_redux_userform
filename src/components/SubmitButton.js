@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { Button } from 'react-bootstrap';
 
 export default React.createClass({
 
@@ -16,7 +17,7 @@ export default React.createClass({
 
   render() {
     return (
-      <button type="submit" className="btn btn-primary" onSubmit={this.context.submit}>Submit</button>
+      <Button bsStyle="primary" type="submit" onClick={this.context.submit}>Submit</Button>
     );
   }
 });

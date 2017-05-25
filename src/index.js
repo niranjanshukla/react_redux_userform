@@ -16,3 +16,4 @@ export default props => (
 
 export {default as TextField} from './components/TextField';
 export {default as SubmitButton} from './components/SubmitButton';
+export {default as List} from './components/List';
